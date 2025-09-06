@@ -1,63 +1,33 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Yoni Kalifi — Engineer</title>
-    <meta name="description" content="Engineer. Building things with code. Links to X, GitHub, and contact." />
-    <meta name="theme-color" content="#0ea5e9" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#0ea5e9" media="(prefers-color-scheme: dark)">
-    <!-- Open Graph / Twitter -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Yoni Kalifi — Engineer" />
-    <meta property="og:description" content="Engineer. Building things with code. Links to X, GitHub, and contact." />
-    <meta property="og:image" content="/og-image.jpg" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Yoni Kalifi — Engineer" />
-    <meta name="twitter:description" content="Engineer. Building things with code." />
-    <meta name="twitter:image" content="/og-image.jpg" />
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
-        rel="stylesheet">
-
+    <title>Yoni Kalifi — I two shotted this website using GPT 5 Thinking</title>
+    <meta name="description"
+        content="Yoni Kalifi — AI + music. Co‑founder of Demos (acq. by Waves). Minimal, Apple‑like one‑pager with an AI twist." />
+    <meta name="theme-color" content="#fffff0" />
     <style>
         :root {
-            --bg: 255 255 255;
-            --fg: 17 24 39;
-            /* gray-900 */
-            --muted: 107 114 128;
-            /* gray-500 */
-            --card: 255 255 255;
-            --border: 229 231 235;
-            /* gray-200 */
-            --accent: 14 165 233;
-            /* sky-500 */
-            --accent-2: 59 130 246;
-            /* blue-500 */
-        }
+            /* Palette */
+            --ivory: #fffff0;
+            /* Ivory */
+            --misty-rose: #fee9e1;
+            /* Misty rose */
+            --apricot: #fad4c0;
+            /* Apricot */
+            --cinereous: #b09e99;
+            /* Cinereous */
 
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --bg: 3 7 18;
-                /* gray-950 */
-                --fg: 243 244 246;
-                /* gray-100 */
-                --muted: 156 163 175;
-                /* gray-400 */
-                --card: 2 6 23;
-                /* slate-950 */
-                --border: 30 41 59;
-                /* slate-800 */
-                --accent: 56 189 248;
-                /* sky-400 */
-                --accent-2: 96 165 250;
-                /* blue-400 */
-            }
+            /* Theme tokens */
+            --bg: var(--ivory);
+            --fg: #1c1a19;
+            --muted: var(--cinereous);
+            --card: var(--misty-rose);
+            --border: rgba(176, 158, 153, 0.45);
+            --accent: var(--apricot);
+            --accent-2: var(--cinereous);
         }
 
         * {
@@ -71,297 +41,378 @@
 
         body {
             margin: 0;
-            font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-            color: rgb(var(--fg));
-            background: radial-gradient(1200px 600px at 10% -10%, rgba(var(--accent)/0.10), transparent),
-                radial-gradient(1000px 500px at 100% 10%, rgba(var(--accent-2)/0.10), transparent),
-                rgb(var(--bg));
-            display: grid;
-            place-items: center;
-            padding: 24px;
+            font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+            color: var(--fg);
+            background: var(--bg);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
-        .card {
-            width: 100%;
-            max-width: 680px;
-            background: rgba(var(--card)/0.9);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgb(var(--border));
-            border-radius: 24px;
-            padding: 28px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
-            position: relative;
-            overflow: hidden;
-            animation: fadeIn 600ms ease-out both;
+        .wrap {
+            max-width: 880px;
+            margin: 0 auto;
+            padding: 10vh 24px;
         }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(8px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .top {
-            display: grid;
-            grid-template-columns: 84px 1fr auto;
-            gap: 18px;
-            align-items: center;
-        }
-
-        .avatar {
-            width: 84px;
-            height: 84px;
-            border-radius: 999px;
-            display: grid;
-            place-items: center;
-            background: linear-gradient(135deg, rgb(var(--accent)) 0%, rgb(var(--accent-2)) 100%);
-            color: white;
-            font-weight: 700;
-            font-size: 28px;
-            letter-spacing: 0.5px;
-        }
-
-        .name {
-            font-size: 28px;
-            font-weight: 700;
-            letter-spacing: -0.3px;
-        }
-
-        .role {
-            color: rgb(var(--muted));
-            margin-top: 4px;
-        }
-
-        .theme-toggle {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            border: 1px solid rgb(var(--border));
-            border-radius: 999px;
-            padding: 8px 12px;
-            background: transparent;
-            color: inherit;
-            cursor: pointer;
-            font: inherit;
-        }
-
-        .bio {
-            margin: 22px 0 8px;
-            line-height: 1.65;
-        }
-
-        .links {
-            display: grid;
-            gap: 12px;
-            margin-top: 16px;
-        }
-
-        @media (min-width: 520px) {
-            .links {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            width: 100%;
-            height: 52px;
-            border-radius: 14px;
-            border: 1px solid rgb(var(--border));
-            background: linear-gradient(180deg, rgba(var(--card)/1) 0%, rgba(var(--card)/0.9) 100%);
-            text-decoration: none;
-            color: inherit;
-            font-weight: 600;
-            letter-spacing: 0.2px;
-            transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease;
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
-            border-color: rgba(var(--accent)/0.6);
-        }
-
-        .btn:active {
-            transform: translateY(0);
-            box-shadow: none;
-        }
-
-        .btn svg {
-            width: 20px;
-            height: 20px;
-        }
-
-        .badges {
+        header {
             display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 16px;
+            flex-direction: column;
+            gap: 16px;
+            margin: 6vh 0 3vh;
         }
 
-        .badge {
-            font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-            font-size: 12px;
-            color: rgb(var(--muted));
-            border: 1px dashed rgb(var(--border));
-            border-radius: 999px;
-            padding: 6px 10px;
+        h1 {
+            font-size: clamp(36px, 7vw, 72px);
+            line-height: 1.05;
+            letter-spacing: -0.02em;
+            margin: 0;
+            background: linear-gradient(90deg, var(--fg), var(--cinereous) 60%, var(--apricot));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
         }
 
-        footer {
-            margin-top: 22px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            justify-content: space-between;
-            color: rgb(var(--muted));
+        .meta {
+            color: var(--muted);
             font-size: 14px;
         }
 
-        .email-copy {
-            border: none;
-            background: transparent;
-            color: inherit;
-            font: inherit;
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+        }
+
+        .intro {
+            font-size: clamp(16px, 2vw, 20px);
+            margin: 8px 0 6px;
+        }
+
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+        .link {
+            text-decoration: none;
+            padding: 8px 12px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            color: var(--fg);
+            transition: transform .15s ease, border-color .15s ease;
+            background: rgba(255, 255, 255, 0.35);
+        }
+
+        .link:hover {
+            border-color: var(--cinereous);
+            transform: translateY(-1px);
+        }
+
+        details {
+            margin-top: 18px;
+        }
+
+        details>summary {
             cursor: pointer;
-            text-decoration: underline;
+            font-weight: 600;
+        }
+
+        details>summary::-webkit-details-marker {
+            display: none;
+        }
+
+        pre {
+            white-space: pre-wrap;
+            font: 13px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+            color: #4e4a47;
+            background: rgba(255, 255, 255, 0.5);
+            border: 1px dashed var(--border);
+            border-radius: 12px;
+            padding: 14px;
+        }
+
+        .contact {
+            margin-top: 6vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .email {
+            font-size: clamp(18px, 2.2vw, 22px);
+            font-weight: 700;
+            letter-spacing: 0.3px;
+            padding: 6px 10px;
+            border-radius: 10px;
+            background: rgba(250, 212, 192, 0.45);
+            border: 1px solid var(--border);
+        }
+
+        .copy {
+            background: transparent;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 8px 10px;
+            color: var(--fg);
+            cursor: pointer;
+        }
+
+        .copy:active {
+            transform: scale(0.98);
+        }
+
+        footer {
+            margin-top: 10vh;
+            color: var(--muted);
+            font-size: 14px;
+            border-top: 1px solid var(--border);
+            padding-top: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        /* Visual juice: drifting orbs + shimmer underline */
+        body::before,
+        body::after {
+            content: "";
+            position: fixed;
+            inset: -20%;
+            pointer-events: none;
+            z-index: -1;
+            background: radial-gradient(600px 400px at 20% 10%, var(--misty-rose), transparent 60%),
+                radial-gradient(700px 500px at 80% 90%, rgba(250, 212, 192, 0.7), transparent 65%);
+            filter: blur(30px);
+            opacity: .55;
+            animation: drift 22s ease-in-out infinite alternate;
+        }
+
+        body::after {
+            background: radial-gradient(500px 380px at 85% 20%, rgba(176, 158, 153, 0.55), transparent 60%),
+                radial-gradient(700px 520px at 10% 85%, rgba(254, 233, 225, 0.65), transparent 65%);
+            animation-duration: 28s;
+            opacity: .45;
+        }
+
+        @keyframes drift {
+            0% {
+                transform: translate3d(-2%, -1%, 0) scale(1);
+            }
+
+            100% {
+                transform: translate3d(2%, 1%, 0) scale(1.02);
+            }
+        }
+
+        h1::after {
+            content: "";
+            display: block;
+            height: 2px;
+            margin-top: 12px;
+            background: linear-gradient(90deg, var(--cinereous), var(--apricot), var(--misty-rose));
+            background-size: 200% 100%;
+            animation: shimmer 8s linear infinite;
+            opacity: .6;
+            border-radius: 2px;
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            100% {
+                background-position: 200% 50%;
+            }
+        }
+
+        .contact-inline {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 12px 0 2px;
+        }
+
+        .email-pill {
+            font-weight: 700;
+            letter-spacing: .2px;
+            padding: 6px 10px;
+            border-radius: 999px;
+            border: 1px solid var(--border);
+            background: rgba(250, 212, 192, 0.55);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, .6);
+        }
+
+        .copy {
+            background: transparent;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            padding: 6px 10px;
+            color: var(--fg);
+            cursor: pointer;
+        }
+
+        .copy:hover {
+            transform: translateY(-1px);
+        }
+
+        .card {
+            backdrop-filter: saturate(120%) blur(2px);
+            -webkit-backdrop-filter: saturate(120%) blur(2px);
+            transition: transform .2s ease, box-shadow .2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 12px 30px rgba(176, 158, 153, .25);
+        }
+
+        .video {
+            margin-top: 18px;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.5);
+            box-shadow: 0 12px 30px rgba(176, 158, 153, .18);
+        }
+
+        .video iframe {
+            width: 100%;
+            aspect-ratio: 16/9;
+            display: block;
         }
     </style>
 </head>
 
 <body>
-    <main class="card" role="main">
-        <section class="top">
-            <!-- Replace inner text with your initials or swap the div for <img src="/avatar.jpg" alt="Your photo" class="avatar" /> -->
-            <div class="avatar" aria-hidden="true">YK</div>
-            <div>
-                <h1 class="name">Yoni Kalifi</h1>
-                <p class="role">Engineer • Tel Aviv</p>
+    <div class="wrap">
+        <header>
+            <h1>I two shotted this website using GPT 5 Thinking</h1>
+            <p class="meta">Built as a single <code>index.html</code>. Minimal, Apple‑ish, with a modern AI tint.</p>
+        </header>
+        <div class="contact-inline" aria-label="Contact">
+            <span class="email-pill">📮 yoni@kalifi.ai</span>
+            <button class="copy" data-copy="yoni@kalifi.ai" aria-label="Copy email">Copy</button>
+        </div>
+
+        <section class="card" aria-labelledby="about-title">
+            <h2 id="about-title" class="sr-only">About</h2>
+            <p class="intro">
+                <strong>Hi, I'm Yoni Kalifi</strong> — co‑founder of Demos (acquired by Waves Audio) and consultant at
+                Waves. I create AI‑driven music tools (incl. ILLUGEN), journeying from cybersecurity into AI
+                startups and research. Self‑taught, and 2M+ Spotify streams as ‘Kalifi’ (כליפי).
+            </p>
+
+            <div class="links">
+                <a class="link" href="https://x.com/KalifiAi" target="_blank" rel="noopener noreferrer">𝕏 follow me on
+                    X and I might start posting</a>
+                <a class="link" href="https://www.linkedin.com/in/yoni-kalifi-a944b9206/" target="_blank"
+                    rel="noopener noreferrer">🔗 LinkedIn</a>
+                <a class="link" href="https://open.spotify.com/artist/4gkcCPTsLolgD7sa1IJqxi?si=2Ud778QZTie2ZCTQsKnzuA"
+                    target="_blank" rel="noopener noreferrer">🎧 Spotify Artist Page</a>
             </div>
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <path
-                        d="M12 3a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0V4a1 1 0 0 1 1-1Zm7.07 2.93a1 1 0 0 1 0 1.41l-1.42 1.42a1 1 0 0 1-1.41-1.41l1.41-1.42a1 1 0 0 1 1.42 0ZM21 13a1 1 0 1 1 0-2h2a1 1 0 1 1 0 2h-2ZM5.64 6.76A1 1 0 0 1 7.05 8.17L5.64 9.59A1 1 0 0 1 4.22 8.17l1.42-1.41ZM12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm-1 3v-2a1 1 0 1 1 2 0v2a1 1 0 1 1-2 0ZM3 13a1 1 0 1 1 0-2H1a1 1 0 1 1 0 2h2Zm2.93 8.07a1 1 0 0 1 0-1.41l1.42-1.42a1 1 0 0 1 1.41 1.41L7.34 21.9a1 1 0 0 1-1.41 0Zm12.02-2.83a1 1 0 0 1 1.41 0l1.42 1.41a1 1 0 0 1-1.41 1.42l-1.42-1.42a1 1 0 0 1 0-1.41Z"
-                        stroke="currentColor" stroke-width="1.5" />
-                </svg>
-                <span>Theme</span>
-            </button>
+
+            <div class="video card" aria-label="ILLUGEN launch video">
+                <iframe src="https://www.youtube.com/embed/hdn8zXrQa_w" title="ILLUGEN — Meet the creators"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+
+            <details>
+                <summary>View Full System Prompts</summary>
+                <p class="meta"><strong>Prompt 1</strong></p>
+                <pre>I want to design a one-pager for my personal site. It should be contained in a single index.html file.
+
+Design wise - the one pager should be modernly designed, with a minimalistic approach. 
+Apple Like aesthetics but with a modern AI touch (think Anthropic color palette meets new Apple Vision Pro Launch).
+
+The site should have a unique twist to it, as it would be self aware to the fact it was created using AI.
+When you enter the site, the big title you'd see is: "I one-shotted this website using GPT 5 Thinking" 
+
+Then there should be a small paragraph about me, starting with "Hi, I'm Yoni Kalifi...". 
+Write the paragraph using info available from my Linkedin profile (attached as kalifi_linkedin.html) and my Twitter Bio (attached as kalifi_twitter_bio.txt).
+
+In addition to the title describe above, the site should have the following elements:
+1. A link to my Twitter account, clickable and should say something like: "follow me on twitter and I might start posting".
+2. A link to my linkedin profile: https://www.linkedin.com/in/yoni-kalifi-a944b9206/
+3. A link to my spotify artist page: https://open.spotify.com/artist/4gkcCPTsLolgD7sa1IJqxi?si=2Ud778QZTie2ZCTQsKnzuA
+4. expand box titled "View Full System Prompt", when the user clicks it it should see the full prompt I'm writing to you right now word by word.
+
+In the bottom of the site put my contact information: yoni@kalifi.ai (email).
+
+And for the human reading this, hmu let's work. </pre>
+                <p class="meta"><strong>Prompt 2</strong></p>
+                <pre>You got most of the things working but there are a few major changes I want you to take.
+
+1.  Change the main text to "I two shotted this website using GPT 5 Thinking", since now there are 2 prompts in the crafting of the site.
+2. The design is not using the correct color palette, change it to the one attached below
+3. The contact information should be clearer and better placed, not only in the footer, and not as a link.
+4. Remove the "🤖 This page knows it was generated by AI — and it’s cool with that." as it's too corny
+5. In the View Full System prompt section do (prompt 1 and prompt 2) where prompt 1 is the previous full system prompt and prompt 2 should be this prompt word by word.
+6. My X account link is https://x.com/KalifiAi (use X not twitter along the site)
+7. Add and embedding of the ILLUGEN launch video (meet the creators) "https://www.youtube.com/watch?v=hdn8zXrQa_w"
+8. Add some visual "Juice" to make the experience more interesting
+9. No need for a dramatic "contact section"
+
+
+### Color Pallete ###
+
+  &lt;color name="Cinereous" hex="b09e99" r="176" g="158" b="153" /&gt;
+  &lt;color name="Misty rose" hex="fee9e1" r="254" g="233" b="225" /&gt;
+  &lt;color name="Apricot" hex="fad4c0" r="250" g="212" b="192" /&gt;
+  &lt;color name="Ivory" hex="fffff0" r="255" g="255" b="240" /&gt;</pre>
+            </details>
         </section>
 
-        <p class="bio">I build clean backends and fun UIs. Into ML, audio, and shipping fast. This is my one-link hub
-            from X (Twitter), GitHub, and anywhere else.</p>
-
-        <div class="links" aria-label="Primary links">
-            <a class="btn" href="https://x.com/your_handle" target="_blank" rel="me noopener">
-                <!-- X / Twitter icon -->
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path
-                        d="M13.19 10.74 20.79 3h-1.79l-6.62 6.91L7.83 3H3l8.02 11.49L3 21h1.79l7.01-7.31L16.17 21H21l-7.81-10.26Zm-2.48 2.59-.81-1.14L5.28 4.3h2.21l3.77 5.34.8 1.14 4.93 6.99h-2.2l-3.98-5.34Z" />
-                </svg>
-                <span>Follow on X</span>
-            </a>
-            <a class="btn" href="https://github.com/your_username" target="_blank" rel="me noopener">
-                <!-- GitHub icon -->
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path
-                        d="M12 2C6.48 2 2 6.58 2 12.26c0 4.52 2.87 8.35 6.85 9.71.5.09.68-.22.68-.49v-1.7c-2.78.62-3.37-1.2-3.37-1.2-.45-1.18-1.1-1.49-1.1-1.49-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.9 1.57 2.37 1.12 2.95.86.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.09 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.74 0 0 .84-.27 2.75 1.05a9.19 9.19 0 0 1 5 0c1.91-1.32 2.75-1.05 2.75-1.05.55 1.43.2 2.48.1 2.74.64.72 1.03 1.63 1.03 2.75 0 3.96-2.34 4.82-4.57 5.08.36.31.69.92.69 1.86v2.76c0 .27.18.59.69.49A10.04 10.04 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z" />
-                </svg>
-                <span>GitHub</span>
-            </a>
-            <a class="btn" href="mailto:hello@yourdomain.com">
-                <!-- Mail icon -->
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path
-                        d="M20 6H4a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2Zm0 2v.51l-7.2 4.5a1 1 0 0 1-1.07 0L4 8.51V8h16ZM4 16V10.26l7.47 4.67c.33.2.74.2 1.06 0L20 10.26V16H4Z" />
-                </svg>
-                <span>Email</span>
-            </a>
-        </div>
-
-        <div class="badges" aria-label="Tags">
-            <span class="badge">TypeScript</span>
-            <span class="badge">Node.js</span>
-            <span class="badge">ML</span>
-            <span class="badge">Audio</span>
-        </div>
-
         <footer>
-            <span>© <span id="year"></span> Yoni Kalifi</span>
-            <button class="email-copy" id="copyEmail" aria-label="Copy email address">Copy email</button>
+            <div>📮 <span class="email">yoni@kalifi.ai</span></div>
+            <div>And for the human reading this, hmu — let’s work.</div>
         </footer>
-    </main>
-
+    </div>
+    yoni@kalifi.ai
     <script>
-        // Year
-        document.getElementById('year').textContent = new Date().getFullYear();
-
-        // Theme toggle with localStorage
-        const toggle = document.getElementById('themeToggle');
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-        const USER_THEME_KEY = 'theme'; // 'light' | 'dark' | null
-
-        function apply(theme) {
-            document.documentElement.dataset.theme = theme;
-            if (theme === 'dark') document.documentElement.classList.add('dark');
-            else document.documentElement.classList.remove('dark');
-        }
-
-        function initTheme() {
-            const saved = localStorage.getItem(USER_THEME_KEY);
-            if (saved === 'light' || saved === 'dark') apply(saved);
-            prefersDark.addEventListener('change', () => {
-                if (!localStorage.getItem(USER_THEME_KEY)) apply(prefersDark.matches ? 'dark' : 'light');
-            });
-        }
-
-        toggle.addEventListener('click', () => {
-            const isDark = document.documentElement.classList.contains('dark');
-            const next = isDark ? 'light' : 'dark';
-            localStorage.setItem(USER_THEME_KEY, next);
-            apply(next);
-        });
-
-        initTheme();
-
-        // Copy email
-        document.getElementById('copyEmail').addEventListener('click', async () => {
-            const email = 'hello@yourdomain.com';
-            try {
-                await navigator.clipboard.writeText(email);
-                const btn = document.getElementById('copyEmail');
-                const prev = btn.textContent;
-                btn.textContent = 'Copied!';
-                setTimeout(() => (btn.textContent = prev), 1400);
-            } catch (e) {
-                window.location.href = 'mailto:' + email;
-            }
-        });
-
-        // JSON-LD (update with your real links)
-        const person = {
-            '@context': 'https://schema.org',
-            '@type': 'Person',
-            name: 'Yoni Kalifi',
-            url: 'https://yourdomain.com',
-            sameAs: [
-                'https://x.com/your_handle',
-                'https://github.com/your_username',
-                'mailto:hello@yourdomain.com'
-            ]
+        // Subtle tilt on cards
+        const tilt = (el, e) => {
+            const r = el.getBoundingClientRect();
+            const x = e.clientX - r.left; const y = e.clientY - r.top;
+            const rx = (y - r.height / 2) / r.height * -4;
+            const ry = (x - r.width / 2) / r.width * 4;
+            el.style.transform = `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg)`;
         };
-        const ld = document.createElement('script');
-        ld.type = 'application/ld+json';
-        ld.textContent = JSON.stringify(person);
-        document.head.appendChild(ld);
+        document.querySelectorAll('.card').forEach(el => {
+            el.addEventListener('pointermove', (e) => tilt(el, e));
+            el.addEventListener('pointerleave', () => el.style.transform = 'perspective(900px) rotateX(0) rotateY(0)');
+        });
+        // Copy-to-clipboard for email
+        document.querySelectorAll('.copy').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const email = btn.dataset.copy || 'yoni@kalifi.ai';
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    navigator.clipboard.writeText(email);
+                }
+                const original = btn.textContent;
+                btn.textContent = 'Copied';
+                setTimeout(() => btn.textContent = original, 1200);
+            });
+        });
     </script>
 </body>
 
